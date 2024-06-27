@@ -190,7 +190,7 @@
 							class="bi bi-chevron-down"></i></a>
 					<ul>
 
-						<li class="dropdown"><a href="#"><span>WHO WE SERVE</span> <i
+						<li class="dropdown"><a href="#"><span>Who we serve</span> <i
 									class="bi bi-chevron-right"></i></a>
 							<ul>
 								<li><a href="#" class="<?php echo ($page === "about") ? 'activelink' : '' ?> ">Dogs
@@ -205,7 +205,7 @@
 										class="<?php echo ($page === "about") ? 'activelink' : '' ?> ">Exotics</a></li>
 							</ul>
 						</li>
-						<li class="dropdown"><a href="#"><span>FIRST DAY</span> <i class="bi bi-chevron-right"></i></a>
+						<li class="dropdown"><a href="#"><span>First Day</span> <i class="bi bi-chevron-right"></i></a>
 							<ul>
 								<li><a href="#"
 										class="<?php echo ($page === "about") ? 'activelink' : '' ?> ">Expectations</a>
@@ -252,11 +252,13 @@
 	</div>
 	<div class="offcanvas-body ">
 
-		<div class=" navbar-collapse" id="navbarNavDropdown">
+		<div class="navbar-collapse" id="navbarNavDropdown">
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link " aria-current="page" href="#">Home</a>
 				</li>
+				
+				<!--  -->
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
@@ -329,3 +331,6 @@
 		</div>
 	</div>
 </div>
+
+
+

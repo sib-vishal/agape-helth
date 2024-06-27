@@ -207,7 +207,7 @@ $(".dbaSlider").slick({
     },
   ],
 });
-$(".certificateSlider").slick({
+$(".reviews").slick({
   dots: true,
   infinite: true,
   speed: 500,
