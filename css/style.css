@@ -108,6 +108,13 @@ section {
   word-spacing: 5px;
 }
 
+.heading-color {
+  color: var(--primary-color);
+}
+.heading-color2 {
+  color: var(--secondary-color);
+}
+
 .fontHeading {
   font-family: "Inter", sans-serif;
   /* font-family: "Gruppo", sans-serif; */
@@ -336,7 +343,9 @@ section {
 }
 .header-offcanvas {
   .nav-link,
+  a,
   .dropdown-item {
+    padding: 0.5rem 1rem;
     color: var(--primary-color);
     font-weight: 500;
     &:hover {
@@ -1136,13 +1145,8 @@ section {
 #carouselExampleFade {
   .carousel-item {
     position: relative;
-
-    /* display: flex;
-    align-items: center; */
-
     img {
       top: 0%;
-      /* transform: translateY(-50%); */
       position: absolute;
       z-index: -1;
     }
@@ -1156,17 +1160,13 @@ section {
     align-items: center;
     .carousel-item_inner_main {
       width: 100%;
-
-      /* h1 {
-        font-size: 35px;
-      } */
     }
   }
 }
 
 .hero {
   position: relative;
-  background-color: #043e6a83;
+  background-color: #043e6a91;
   color: white;
 
   h2 {
@@ -1533,7 +1533,7 @@ section {
       width: 50%;
 
       form {
-        margin-top: 40px;
+        margin-top: 20px;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 20px;
@@ -1572,18 +1572,261 @@ section {
     }
   }
 }
+.btn_1 {
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 12px;
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+.btn_2 {
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  &:hover {
+    background-color: #819eb4;
+  }
+}
 
 .contact-banner {
   .contact-banner_inner {
     padding: 150px 20px;
   }
 }
-.address-details{
+.address-details {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
-.address-details-card{
+.address-details-card {
   border-radius: 10px;
   background-color: var(--primary-color);
+}
+
+/* chiropractic_services_banner */
+.chiropractic_services_banner {
+  .contact-banner_inner {
+    padding: 120px 20px;
+  }
+}
+
+.chiropractic_main {
+  .dog-palm {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    right: 0;
+    opacity: 0.3;
+    filter: invert(50%);
+  }
+
+  .chiropractic_imgbox {
+    border: 1px transparent;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    img {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      border: 1px dashed var(--primary-color);
+      img {
+        scale: 0.9;
+      }
+    }
+  }
+}
+
+.chiropractic_services_grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+
+  .items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 390px;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+      background-color: #043e6a;
+      .item_content {
+        background-color: #ffffff00;
+        z-index: 2;
+        opacity: 1;
+        transform: translateY(0px);
+        visibility: visible;
+        h3 {
+          color: #fff;
+          background-color: #ffffff00;
+        }
+      }
+      img {
+        opacity: 0.1;
+      }
+    }
+    .item_content {
+      transform: translateY(190px);
+      transition: all 0.3s ease-in-out;
+      h3 {
+        color: #000000;
+        padding: 5px 0;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+      a {
+        width: fit-content;
+      }
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-position: top;
+      object-fit: cover;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.feedback {
+  background-color: #043e6ac2;
+  background-image: url(../images/feedback.webp);
+  background-blend-mode: multiply;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  h4,
+  h3 {
+    color: antiquewhite;
+  }
+  .feedback_grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    .feedback_item {
+      border: 2px solid antiquewhite;
+      padding: 20px;
+      p {
+        color: #fff;
+      }
+      h4 {
+        margin-top: 20px;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+/* chiropractic-services-dogs */
+.chiropractic_services_dog_banner {
+  background-image: url(../images/services/banner-animal/close-up-smiley-dog-vet-clinic_23-2149304334.jpg);
+  background-blend-mode: multiply;
+  background-position: top center;
+  background-size: cover;
+}
+
+.chiropractic_services_dog_banner .chiropractic_services_banner {
+  padding: 60px 20px;
+}
+
+.chiropractic_services_dog_banner .chiropractic_services_banner h1 {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.chiropractic_services_dog_banner .chiropractic_services_banner button {
+  margin: 0 auto;
+  display: block;
+}
+
+.chiropractic_services_dog_intruction {
+  padding-left: 25px;
+  display: grid;
+  column-gap: 30px;
+  row-gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  li {
+    list-style: disc;
+    list-style-position: outside;
+  }
+}
+.process {
+  margin-top: 20px;
+  padding-left: 25px;
+}
+.process li {
+  list-style: disc;
+  list-style-position: outside;
+}
+.process_dog_img img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 450px;
+}
+
+/* chiropractic_services_cat_banner */
+.chiropractic_services_cat_banner {
+  background-blend-mode: multiply;
+  background-image: url(../images/cat-care1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.chiropractic_services_cat_banner .chiropractic_services_banner {
+  padding: 60px 20px;
+}
+.chiropractic_services_cat_banner .chiropractic_services_banner h1 {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.chiropractic_services_cat_banner .chiropractic_services_banner button {
+  margin: 0 auto;
+  display: block;
+}
+
+.help_fline {
+  margin-top: 30px;
+  display: grid;
+  column-gap: 30px;
+  row-gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.help_fline_item img {
+  width: 80px;
+  /* display: block;
+  margin: 0 auto; */
+}
+.help_fline_item ul {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+.help_fline_item ul li {
+  list-style: disc;
+  list-style-position: outside;
+}
+.help_fline_btn {
+  width: fit-content;
+  &:hover {
+    color: #fff;
+  }
+}
+
+#appointment{
+  scroll-margin-top:30px ;
 }
